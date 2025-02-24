@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    margin-top: 30px;
+}
+
+#demarrer {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    margin: 20px auto;
+    cursor: pointer;
+    display: block;
+}
+
+#jeu {
+    display: none;
+}
+
+#pendu {
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+#motCache {
+    font-size: 2em;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+button {
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#messageFin {
+    font-size: 1.3em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#rejouer {
+    display: none;
+    font-size: 1.1em;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+
+.correct {
+    background-color: rgb(24, 185, 24); /* Vert pour les choix corrects */
+    color: white;
+}
+
+.incorrect {
+    background-color: rgb(151, 12, 12); /* Rouge pour les choix incorrects */
+    color: white;
+}
+
+button.disabled {
+    background-color: gray;
+    color: darkgray;
+    cursor: not-allowed;
+}
+
+#erreursRestantes {
+    margin-top: 30px;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#volumeControl {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#volumeControl label {
+    margin-right: 10px;
+}
+
+#volumeControl input {
+    width: 20vw;
+}
+
+#alphabet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#alphabet button {
+    font-size: 1em;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    flex: 1 1 45px; 
+    max-width: 45px; 
+}
+
+#alphabet button:hover {
+    background-color: #098f9e;
+    scale: 1.4;
+}
+
+
+@media (min-width: 600px) {
+    #alphabet button {
+        flex: 1 1 calc(50% - 10px); 
+    }
+}

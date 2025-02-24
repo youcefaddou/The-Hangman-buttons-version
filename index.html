@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>The Hangman</title>
+</head>
+
+<body>
+    <h1>Jeu du Pendu</h1>
+    <button id="demarrer" onclick="demarrer()">Démarrer</button>
+    <div id="jeu" style="display:none;">
+        <div id="pendu"></div>
+        <div id="motCache"></div>
+        <div id="lettresProposees"></div>
+        <div id="alphabet" class="lettres"></div>
+        <div id="messageFin"></div>
+        <div id="erreursRestantes"></div>
+        <div class="centered">
+            <button id="rejouer" onclick="init()">Rejouer</button>
+        </div>
+        <div id="volumeControl">
+            <label for="volume">Volume:</label>
+            <input type="range" id="volume" min="0" max="100" value="50">
+        </div>
+    </div>
+    <script src="./assets/javascript/main.js"></script>
+</body>
+
+</html>
