@@ -12,7 +12,6 @@
     <h1>Jeu du Pendu</h1>
     <button id="demarrer" onclick="demarrer()">Démarrer</button>
     <div id="jeu" style="display:none;">
-        <div id="pendu"></div>
         <div id="motCache"></div>
         <div id="lettresProposees"></div>
         <div id="alphabet" class="lettres"></div>
@@ -24,6 +23,14 @@
         <div id="volumeControl">
             <label for="volume">Volume:</label>
             <input type="range" id="volume" min="0" max="100" value="50">
+        </div>
+        <div id="pendu">
+            <div class="part head"></div>
+            <div class="part body"></div>
+            <div class="part arm left-arm"></div>
+            <div class="part arm right-arm"></div>
+            <div class="part leg left-leg"></div>
+            <div class="part leg right-leg"></div>
         </div>
     </div>
     <script src="./assets/javascript/main.js"></script>

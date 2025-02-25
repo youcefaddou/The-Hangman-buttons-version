@@ -25,6 +25,74 @@ h1 {
 #pendu {
     margin-top: 20px;
     font-size: 2em;
+    width: 200px;
+    height: 400px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.part {
+    display: none;
+    position: absolute;
+}
+
+.head {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid black;
+    top: 50px;
+    left: 75px;
+}
+.body {
+    width: 10px;
+    height: 100px;
+    background: black;
+    top: 110px;
+    left: 100px;
+}
+.arm {
+    width: 60px;
+    height: 10px;
+    background: black;
+}
+
+.left-arm {
+    transform: rotate(-45deg);
+    top: 120px;
+    left: 40px;
+}
+
+.right-arm {
+    transform: rotate(45deg);
+    top: 120px;
+    left: 110px;
+}
+
+.leg {
+    width: 60px;
+    height: 10px;
+    background: black;
+}
+
+.left-leg {
+    transform: rotate(-45deg);
+    top: 200px;
+    left: 50px;
+}
+
+.right-leg {
+    transform: rotate(45deg);
+    top: 120px;
+    left: 110px;
+}
+@keyframes showPart {
+    from { opacity: 0;}
+    to { opacity: 1}
+}
+.show {
+    display: block;
+    animation: showPart 0.6s ease-in-out;
 }
 
 #motCache {
@@ -58,12 +126,14 @@ button {
 }
 
 .correct {
-    background-color: rgb(24, 185, 24); /* Vert pour les choix corrects */
+    background-color: rgb(24, 185, 24);
+    /* Vert pour les choix corrects */
     color: white;
 }
 
 .incorrect {
-    background-color: rgb(151, 12, 12); /* Rouge pour les choix incorrects */
+    background-color: rgb(151, 12, 12);
+    /* Rouge pour les choix incorrects */
     color: white;
 }
 
@@ -109,8 +179,8 @@ button.disabled {
     color: white;
     border: none;
     cursor: pointer;
-    flex: 1 1 45px; 
-    max-width: 45px; 
+    flex: 1 1 45px;
+    max-width: 45px;
 }
 
 #alphabet button:hover {
@@ -121,6 +191,6 @@ button.disabled {
 
 @media (min-width: 600px) {
     #alphabet button {
-        flex: 1 1 calc(50% - 10px); 
+        flex: 1 1 calc(50% - 10px);
     }
 }

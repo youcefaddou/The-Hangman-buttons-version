@@ -3,7 +3,7 @@ let motADeviner;
 let motCache;
 let lettresProposees = [];
 let erreurs = 0;
-let maxErreurs = 5;
+let maxErreurs = 6;
 
 const bgMusic = new Audio('./assets/audio/hangmanbg.mp3');
 bgMusic.loop = true;
@@ -54,6 +54,9 @@ function proposerLettre(lettre, button) {
             button.classList.add('incorrect');
             button.style.backgroundColor = 'red';  // Couleur rouge pour la mauvaise réponse
             document.querySelector("#erreursRestantes").innerText = `Erreurs restantes : ${maxErreurs - erreurs}`;
+            if (erreurs < maxErreurs) {
+                document.querySelectorAll('.part')[erreurs -1].classList.add('show')
+            }
             if (erreurs === maxErreurs) {
                 document.querySelector("#messageFin").innerText = `Dommage ! Le mot était "${motADeviner}".`;
                 document.querySelector("#rejouer").style.display = "block";
@@ -78,7 +81,7 @@ function displayKeyboard() {
     });
 }
 
-// Function for the volume control
+// Fonction pour le controle du volume
 function updateVolume() {
     const volume = document.querySelector("#volume").value / 100;
     bgMusic.volume = volume;
